@@ -55,21 +55,28 @@
             height: 32rem;
         }
 
+        .divider {
+            font-size: 30px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+
+        .divider::after {
+            flex: 1;
+            content: '';
+            padding: 1.5px;
+            background-color: #B8B8B8;
+            margin: 5px 20px;
+
+
+        }
+
         .card {
             border-width: 0px;
         }
 
-
-
-
-        .container3 {
-
-            /* margin-bottom: 1.5rem; */
-            text-align: center;
-            /* margin-right: .75rem; */
-            /* margin-left: .75rem; */
-
-        }
 
         .bd-placeholder-img {
             font-size: 1.125rem;
@@ -119,102 +126,9 @@
 
 <body>
     <div></div>
-    <!-- <header class="p-3 text-bg-dark ">
-        <div class="container-fuid">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
 
-                <a href="#" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap" />
-                    </svg>
-                </a>
+    <!-- heading -->
 
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-                    <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-                </ul>
-
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..."
-                        aria-label="Search">
-                </form>
-
-                <div class="text-end">
-                    <button type="button" class="btn btn-outline-light me-2">Login</button>
-                    <button type="button" class="btn btn-warning">Sign-up</button>
-                </div>
-            </div>
-        </div>
-    </header> -->
-
-    <!-- <div class="container">
-        <header class="d-flex align-items-center justify-content-center justify-content-md-between py-3 " >
-            <a class="navbar-brand" href="#">Container</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
-                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-          <form role="search" id="navbarsExample07">
-            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-        </form>
-        
-          <div class="col-md-3 text-end">
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
-          </div>
-          
-        </header>
-    </div> -->
-
-    <!-- <header class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example">
-
-        <div class="container">
-
-            <a class="navbar-brand" href="#">Container</a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample07"
-                aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-      
-            <div class="collapse navbar-collapse " id="navbarsExample07">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Dropdown</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <form role="search">
-                    <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                </form>
-                <div class="ms-auto mb-2 mb-lg-0">
-                    <a href="#" class="bi bi-cart text-light fs-5 mx-2 dropdown"></a>
-                    <a class="bi bi-heart-fill text-light fs-5 mx-2 " ></a>
-                </div>
-                
-            </div>
-            
-        </div>
-    </header>
- -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" aria-label="Offcanvas navbar large">
         <div class="container-fluid px-5">
             <a class="navbar-brand" href="#">
@@ -234,15 +148,16 @@
                 <div class="offcanvas-body">
 
                     <form class="d-flex   m-auto " role="search">
-                        <input class="form-control form-control-sm me-2" type="search" placeholder="Search" aria-label="Search">
-                        
+                        <input class="form-control form-control-sm me-2" type="search" placeholder="Search"
+                            aria-label="Search">
+
                         <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
                     </form>
 
                     <ul class="navbar-nav">
-                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle bi bi-cart text-light " href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle bi bi-cart text-light " href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
                             </a>
                             <ul class="dropdown-menu pe-5">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
@@ -254,21 +169,22 @@
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link active bi bi-heart-fill text-light" aria-current="page" href="#"></a>
+                            <a href="#" class="nav-link active bi bi-heart-fill text-light" aria-current="page"
+                                href="#"></a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link  bi bi-person-circle" href="#"></a>
                         </li>
-                       
+
                     </ul>
-                   
+
                 </div>
             </div>
         </div>
     </nav>
 
 
-
+    <!-- 目錄 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example ">
         <div class="container mx-auto ">
             <div class="collapse navbar-collapse" id="navbarsExample07">
@@ -316,6 +232,7 @@
         </div>
     </nav>
 
+    <!-- Slide -->
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -376,6 +293,17 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
+
+    <!-- title -->
+    <div class="container d-flex  justify-content-between my-5">
+
+        <h4 class="text-dark text-nowrap fs-2 fw-bolder">即將出版 Coming soon</h4>
+        <div class="divider">
+        </div>
+        <button class="btn btn-outline-secondary btn-sm">more</button>
+    </div>
+
+    <!-- Card_small -->
     <div class="container ">
         <div class="row ">
             <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
@@ -394,92 +322,105 @@
                     </span>
                 </div>
             </div>
+
             <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid"
-                        alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid" alt="..."
+                        class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build
+                        <p class="card-title text-start fw-bold">火影忍者</p>
+                        <p class="card-text text-start fs-6"><small class="text-muted">岸本齊史</small>
+
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build
-                        </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build
-                        </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build
-                        </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid"
-                        alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build
-                        </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
-                    </div>
+                    <span class="d-flex justify-content-between">
+                        <a href="" class="bi bi-heart text-dark fs-4"></a>
+                        <a href="" class=" bi bi-cart text-dark  fs-4"></a>
+                    </span>
                 </div>
             </div>
 
+            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid" alt="..."
+                        class="">
+                    <div class="card-body">
+                        <p class="card-title text-start fw-bold">火影忍者</p>
+                        <p class="card-text text-start fs-6"><small class="text-muted">岸本齊史</small>
 
+                        </p>
+                    </div>
+                    <span class="d-flex justify-content-between">
+                        <a href="" class="bi bi-heart text-dark fs-4"></a>
+                        <a href="" class=" bi bi-cart text-dark  fs-4"></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid" alt="..."
+                        class="">
+                    <div class="card-body">
+                        <p class="card-title text-start fw-bold">火影忍者</p>
+                        <p class="card-text text-start fs-6"><small class="text-muted">岸本齊史</small>
+
+                        </p>
+                    </div>
+                    <span class="d-flex justify-content-between">
+                        <a href="" class="bi bi-heart text-dark fs-4"></a>
+                        <a href="" class=" bi bi-cart text-dark  fs-4"></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid" alt="..."
+                        class="">
+                    <div class="card-body">
+                        <p class="card-title text-start fw-bold">火影忍者</p>
+                        <p class="card-text text-start fs-6"><small class="text-muted">岸本齊史</small>
+
+                        </p>
+                    </div>
+                    <span class="d-flex justify-content-between">
+                        <a href="" class="bi bi-heart text-dark fs-4"></a>
+                        <a href="" class=" bi bi-cart text-dark  fs-4"></a>
+                    </span>
+                </div>
+            </div>
+
+            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid" alt="..."
+                        class="">
+                    <div class="card-body">
+                        <p class="card-title text-start fw-bold">火影忍者</p>
+                        <p class="card-text text-start fs-6"><small class="text-muted">岸本齊史</small>
+
+                        </p>
+                    </div>
+                    <span class="d-flex justify-content-between">
+                        <a href="" class="bi bi-heart text-dark fs-4"></a>
+                        <a href="" class=" bi bi-cart text-dark  fs-4"></a>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 
+    <!-- title -->
+    <div class="container d-flex  justify-content-between my-5">
 
+        <h4 class="text-dark text-nowrap fs-2 fw-bolder">人氣排行 Popular comics</h4>
+        <div class="divider">
+        </div>
+        <button class="btn btn-outline-secondary btn-sm">more</button>
+    </div>
+
+
+    <!-- Card_YOKO -->
     <div class="container  ">
         <div class="row ">
             <div class="col-md-4 ">
@@ -512,36 +453,60 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mt-4">
+            <div class="col-md-4 ">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="img-fluid rounded-4 "
                                 alt="...">
                         </div>
-                        <div class="col-md-6 ">
+                        <div class="col-md-6 d-flex flex-column justify-content-between ">
                             <div class="card-body">
-                                <h5 class="card-title text-nowrap">我的英雄學院</h5>
-                                <p class="card-text">This is a wider </p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p class="card-title text-start fw-bold text-nowrap">葬送的芙莉蓮</h5><br>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                <p class="card-text text-start"><small class="text-muted">山田鐘人 阿部司</small></p>
                             </div>
+                            <span class="card-body d-flex justify-content-between align-items-end  ">
+                                <span>
+                                    <a href="" class="bi bi-heart text-dark fs-4"></a>
+                                    <a href="" class=" bi bi-cart text-dark fs-4  "></a>
+                                </span>
+
+                                <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                            </span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mt-4">
+            <div class="col-md-4 ">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-md-6">
                             <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="img-fluid rounded-4 "
                                 alt="...">
                         </div>
-                        <div class="col-md-6 ">
+                        <div class="col-md-6 d-flex flex-column justify-content-between ">
                             <div class="card-body">
-                                <h5 class="card-title">我的英雄學院</h5>
-                                <p class="card-text">This is a wider </p>
-                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                <p class="card-title text-start fw-bold text-nowrap">葬送的芙莉蓮</h5><br>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                <p class="card-text text-start"><small class="text-muted">山田鐘人 阿部司</small></p>
                             </div>
+                            <span class="card-body d-flex justify-content-between align-items-end  ">
+                                <span>
+                                    <a href="" class="bi bi-heart text-dark fs-4"></a>
+                                    <a href="" class=" bi bi-cart text-dark fs-4  "></a>
+                                </span>
+
+                                <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -549,8 +514,11 @@
         </div>
 
     </div>
+
+
+    <!-- CM -->
     <div class="container  ">
-        <div class="p-5 mb-0 bg-light rounded-4 ">
+        <div class="p-5 mt-5 bg-light rounded-4 ">
             <div class="container-fluid py-5">
                 <h1 class="display-5 fw-bold">Custom jumbotron</h1>
                 <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one
@@ -561,6 +529,16 @@
         </div>
     </div>
 
+    <!-- title -->
+    <div class="container d-flex  justify-content-between mt-5 mb-1">
+
+        <h4 class="text-dark text-nowrap fs-2 fw-bolder">熱門推薦 Recommendation</h4>
+        <div class="divider">
+        </div>
+        <button class="btn btn-outline-secondary btn-sm">more</button>
+    </div>
+
+    <!-- Card_large -->
     <div class="container  ">
         <div class="row ">
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
@@ -750,7 +728,8 @@
         </div>
     </div>
 
-    <div class="container_fill bg-light">
+    <!-- CM -->
+    <div class="container_fill bg-light mt-5">
         <div class="row featurette w-100 ">
             <div class="col-md-6 order-md-2 ">
                 <h2 class="featurette-heading fw-normal lh-1">
@@ -766,13 +745,9 @@
             </div>
             <div class="col-md-6 order-md-1">
 
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" 
-                width="500" height="500" 
-                xmlns="http://www.w3.org/2000/svg" 
-                role="img" a
-                ria-label="Placeholder: 500x500"
-                preserveAspectRatio="xMidYMid slice" 
-                focusable="false">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" a ria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
 
                     <title>Placeholder</title>
 
@@ -784,8 +759,8 @@
         </div>
     </div>
 
-
-    <div class="container7  ">
+    <!-- footer -->
+    <div class="container-fluid bg-dark text-light">
         <footer class="p-5 ">
             <div class="row w-100 ">
                 <div class="col-6 col-md-2 mb-3">
@@ -837,17 +812,17 @@
             <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
                 <p>&copy; 2022 Company, Inc. All rights reserved.</p>
                 <ul class="list-unstyled d-flex">
-                    <li class="ms-3">
-                        <a class="link-dark" href="#">
+                    <li class="ms-3 ">
+                        <a class="link-dark text-light" href="#">
                             <i class="bi bi-twitter-x"></i>
                         </a>
                     </li>
                     <li class="ms-3">
-                        <a class="link-dark" href="#">
+                        <a class="link-dark text-light" href="#">
                             <i class="bi bi-instagram"></i>
                         </a>
                     </li>
-                    <li class="ms-3"><a class="link-dark" href="#">
+                    <li class="ms-3"><a class="link-dark text-light" href="#">
                             <i class="bi bi-facebook"></i>
                         </a>
                     </li>
