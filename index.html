@@ -33,6 +33,7 @@
         }
 
         body {
+            background-color: #ffff;
             min-height: 75rem;
             padding-top: 3.5rem;
         }
@@ -131,7 +132,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" aria-label="Offcanvas navbar large">
         <div class="container-fluid px-5">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand fw-bolder fs-3" href="#">
                 COMICS
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2"
@@ -154,26 +155,28 @@
                         <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
                     </form>
 
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle bi bi-cart text-light " href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                    <ul class="navbar-nav ">
+                        <li class="nav-item dropdown ms-2">
+                            <a class="nav-link  bi bi-cart text-light  fs-4" href="#" >
                             </a>
-                            <ul class="dropdown-menu pe-5">
+                            <!-- <a class="nav-link dropdown-toggle bi bi-cart text-light " href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            </a> -->
+                            <!-- <ul class="dropdown-menu pe-5">
                                 <li><a class="dropdown-item" href="#">Action</a></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item" href="#">Something else here</a></li>
-                            </ul>
+                            </ul> -->
                         </li>
-                        <li class="nav-item">
-                            <a href="#" class="nav-link active bi bi-heart-fill text-light" aria-current="page"
+                        <li class="nav-item ms-2">
+                            <a href="#" class="nav-link active bi bi-heart-fill text-light fs-4" aria-current="page"
                                 href="#"></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link  bi bi-person-circle" href="#"></a>
+                        <li class="nav-item ms-2">
+                            <a class="nav-link  bi bi-person-circle fs-4" href="#"></a>
                         </li>
 
                     </ul>
@@ -187,12 +190,12 @@
     <!-- 目錄 -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example ">
         <div class="container mx-auto ">
-            <div class="collapse navbar-collapse" id="navbarsExample07">
+            <div class="collapse navbar-collapse " id="navbarsExample07">
                 <ul class="navbar-nav mx-auto mb-0 mb-lg-0 ">
 
                     <li class="nav-item dropdown mx-auto">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Dropdown</a>
+                            aria-expanded="false">全站分類</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -201,7 +204,7 @@
                     </li>
                     <li class="nav-item dropdown mx-auto">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Dropdown</a>
+                            aria-expanded="false">特價活動</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -210,7 +213,7 @@
                     </li>
                     <li class="nav-item dropdown mx-auto">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Dropdown</a>
+                            aria-expanded="false">新書上架</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -219,7 +222,7 @@
                     </li>
                     <li class="nav-item dropdown mx-auto">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
-                            aria-expanded="false">Dropdown</a>
+                            aria-expanded="false">人氣排行</a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
@@ -446,7 +449,7 @@
                                     <a href="" class=" bi bi-cart text-dark fs-4  "></a>
                                 </span>
 
-                                <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                                <button class="mybtn" type="button" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px;border-width: 0px; ">試讀</button>
                             </span>
                         </div>
 
@@ -518,13 +521,13 @@
 
     <!-- CM -->
     <div class="container  ">
-        <div class="p-5 mt-5 bg-light rounded-4 ">
+        <div class="p-5 mt-5 bg-light rounded-4 " style="background-image: url(https://plus.unsplash.com/premium_photo-1661371634490-66741daf55c9?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;">
             <div class="container-fluid py-5">
-                <h1 class="display-5 fw-bold">Custom jumbotron</h1>
-                <p class="col-md-8 fs-4">Using a series of utilities, you can create this jumbotron, just like the one
-                    in previous versions of Bootstrap. Check out the examples below for how you can remix and restyle it
-                    to your liking.</p>
-                <button class="btn btn-primary btn-lg" type="button">Example button</button>
+                <!-- <h1 class="display-5 fw-bold">Custom jumbotron</h1> -->
+                <p class="col-md-8 fs-3 text-light w-50 text-center">熱銷漫畫限時折扣，立即享受超值優惠，不容錯過的數位閱讀盛宴！</p>
+                <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button> -->
             </div>
         </div>
     </div>
@@ -535,12 +538,31 @@
         <h4 class="text-dark text-nowrap fs-2 fw-bolder">熱門推薦 Recommendation</h4>
         <div class="divider">
         </div>
-        <button class="btn btn-outline-secondary btn-sm">more</button>
+        <button class="mybtn" type="button" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px;border-width: 0px; ">more</button>
     </div>
 
     <!-- Card_large -->
-    <div class="container  ">
+    <div class="container my-4 ">
         <div class="row ">
+            <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
+                    <div class="card-body">
+                        <h5 class="card-title">鋼之鍊金術師</h5>
+                        <p class="card-text">
+                            荒川 弘
+                        </p>
+                    </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <button class=""style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px; border-width: 0px;">試讀</button>
+                    </span>
+                </div>
+            </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
                 <div class="card">
                     <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
@@ -561,198 +583,224 @@
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
+                        </span>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
             <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
+                <div class="card">
+                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="..." class="">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
+                        <h5 class="card-title">鋼之鍊金術師</h5>
                         <p class="card-text">
-                            Some quick example text to build
+                            荒川 弘
                         </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
-                        </span>
                     </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-3 mt-4">
-                <div class="card ">
-                    <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">
-                            Some quick example text to build
-                        </p>
-                        <span class="d-flex justify-content-between">
-                            <a href="" class="bi bi-heart text-dark"></a>
-                            <a href="" class=" bi bi-cart text-dark "></a>
+                    <span class="d-flex justify-content-between align-items-center">
+                        <span>
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
                         </span>
-                    </div>
+
+                        <a href="#" class="btn btn-outline-secondary btn-sm">試讀</a>
+                    </span>
                 </div>
             </div>
         </div>
     </div>
 
     <!-- CM -->
-    <div class="container_fill bg-light mt-5">
+    <div class="container_fill bg-light mt-5" style="height: 550px;">
         <div class="row featurette w-100 ">
-            <div class="col-md-6 order-md-2 ">
-                <h2 class="featurette-heading fw-normal lh-1">
-                    Oh yeah, it’s that good.
-                    <span class="text-muted">See for
-                        yourself.</span>
+            <div class="col-md-6 order-md-2 text-center ">
+                <h2 class="featurette-heading fw-bold lh-1 fs-2">
+                    「數位漫畫讓讀者隨時隨地享受閱讀的樂趣，不再受限於實體書籍的攜帶與保存。」
+                    <!-- <span class="text-muted">See for
+                        yourself.</span> -->
                 </h2>
-                <p class="lead">
-                    Another featurette? Of course. More placeholder content here to give you an idea of how
-                    this layout would work with some actual real-world content in place.
+                <p class="lead fw-bold">
+                    ——《數位時代的閱讀革命》
                 </p>
-                <button class="btn btn-primary btn-lg" type="button">Example button</button>
+                <!-- <button class="btn btn-primary btn-lg" type="button">Example button</button> -->
             </div>
             <div class="col-md-6 order-md-1">
 
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
-                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" a ria-label="Placeholder: 500x500"
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto my-100" 
+
+                     xmlns="http://www.w3.org/2000/svg" role="img" a ria-label="Placeholder: 500x500"
+
                     preserveAspectRatio="xMidYMid slice" focusable="false">
 
-                    <title>Placeholder</title>
+                    <!-- <title>Placeholder</title> -->
 
-                    <rect width="100%" height="100%" fill="#eee" />
-                    <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
+                    <!-- <rect width="100%" height="100%" fill="#eee" />
+                    <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text> -->
                 </svg>
 
             </div>
@@ -760,7 +808,7 @@
     </div>
 
     <!-- footer -->
-    <div class="container-fluid bg-dark text-light">
+    <div class="container-fluid  text-light" style="background-color:#323F3E ;">
         <footer class="p-5 ">
             <div class="row w-100 ">
                 <div class="col-6 col-md-2 mb-3">
@@ -803,7 +851,8 @@
                         <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                             <label for="newsletter1" class="visually-hidden">Email address</label>
                             <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
-                            <button class="btn btn-primary" type="button">Subscribe</button>
+
+                            <button class="mybtn" type="button" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px;border-width: 0px; ">訂閱</button>
                         </div>
                     </form>
                 </div>
