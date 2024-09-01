@@ -17,7 +17,8 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <!-- for bootstrap-icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
+    <link rel="icon" href="./icon/favicon.ico.ico" type="image/x-icon" />
+    <!-- <link rel="shortcut icon" href="./favicon.ico.ico" type="image/x-icon" /> -->
 
     <title>COMICS</title>
     <style>
@@ -61,6 +62,7 @@
             display: flex;
             align-items: center;
             width: 100%;
+            padding: 5px 20px;;
         }
 
 
@@ -69,7 +71,8 @@
             content: '';
             padding: 1.5px;
             background-color: #B8B8B8;
-            margin: 5px 20px;
+            /* margin: 5px 20px; */
+            margin: auto;
 
 
         }
@@ -94,12 +97,15 @@
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+            /* .divider{
+            display: none;
+        } */
         }
 
         .featurette-heading {
             letter-spacing: -.05rem;
         }
-
+        
 
 
 
@@ -115,6 +121,7 @@
             .featurette-heading {
                 font-size: 50px;
             }
+           
         }
 
         @media (min-width: 62em) {
@@ -130,7 +137,7 @@
 
     <!-- heading -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark" aria-label="Offcanvas navbar large">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top " aria-label="Offcanvas navbar large" style="background-color: #323F3E;">
         <div class="container-fluid px-5">
             <a class="navbar-brand fw-bolder fs-3" href="#">
                 COMICS
@@ -149,7 +156,7 @@
                 <div class="offcanvas-body">
 
                     <form class="d-flex   m-auto " role="search">
-                        <input class="form-control form-control-sm me-2" type="search" placeholder="Search"
+                        <input class="form-control form-control-sm me-1" type="search" placeholder="Search"
                             aria-label="Search">
 
                         <button class="btn btn-outline-light btn-sm" type="submit">Search</button>
@@ -188,7 +195,7 @@
 
 
     <!-- 目錄 -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Eighth navbar example ">
+    <nav class="navbar navbar-expand-lg navbar-dark " aria-label="Eighth navbar example " style="background-color: #323F3E;">
         <div class="container mx-auto ">
             <div class="collapse navbar-collapse " id="navbarsExample07">
                 <ul class="navbar-nav mx-auto mb-0 mb-lg-0 ">
@@ -449,7 +456,7 @@
                                     <a href="" class=" bi bi-cart text-dark fs-4  "></a>
                                 </span>
 
-                                <button class="mybtn" type="button" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px;border-width: 0px; ">試讀</button>
+                                <button class="mybtn" type="button" style="background-color: #d45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px;border-width: 0px; ">試讀</button>
                             </span>
                         </div>
 
@@ -538,7 +545,7 @@
         <h4 class="text-dark text-nowrap fs-2 fw-bolder">熱門推薦 Recommendation</h4>
         <div class="divider">
         </div>
-        <button class="mybtn" type="button" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px;border-width: 0px; ">more</button>
+        <button class="mybtn" type="button" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; border-width: 0px; width: 10%;">more</button>
     </div>
 
     <!-- Card_large -->
