@@ -5,8 +5,10 @@ require("config.php");
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 $sql = "SELECT * FROM book";
 $result = mysqli_query($link, $sql);
-
-
+$commandText = <<<SqlQuery
+SELECT * FROM book ORDER BY Book_ID LIMIT 5;
+SqlQuery;
+$result = mysqli_query ( $link, $commandText );
 ?>
 
 <!DOCTYPE html>

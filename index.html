@@ -20,6 +20,9 @@
     <link rel="icon" href="./icon/favicon.ico.ico" type="image/x-icon" />
     <!-- <link rel="shortcut icon" href="./favicon.ico.ico" type="image/x-icon" /> -->
 
+     <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <title>COMICS</title>
     <style>
         * {
@@ -89,6 +92,27 @@
             -moz-user-select: none;
             user-select: none;
         }
+
+        .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
 
         /* RESPONSIVE CSS
@@ -314,10 +338,10 @@
     </div>
 
     <!-- Card_small -->
-    <div class="container ">
-        <div class="row ">
-            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
-                <div class="card">
+    <div class="container swiper mySwiper ">
+        <div class="row flex-nowrap swiper-wrapper ">
+            <div class="col-sm-0 col-md-2 col-lg-2 mt-4 swiper-slide">
+                <div class="card ">
                     <img src="https://dummyimage.com/148x210/000/fff&text=148x210" class="rounded-4 img-fluid" alt="..."
                         class="">
                     <div class="card-body">
@@ -418,6 +442,7 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="swiper-pagination"></div> -->
     </div>
 
     <!-- title -->
@@ -522,7 +547,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 
 
@@ -887,7 +911,34 @@
         </footer>
     </div>
 
+<!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 10,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 4,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 5,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
 
 
 
