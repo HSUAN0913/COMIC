@@ -5,10 +5,10 @@ require("config.php");
 $link = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 $sql = "SELECT * FROM book";
 $result = mysqli_query($link, $sql);
-$commandText = <<<SqlQuery
-SELECT * FROM book ORDER BY Book_ID LIMIT 5;
-SqlQuery;
-$result = mysqli_query ( $link, $commandText );
+// $commandText = <<<SqlQuery
+// SELECT * FROM book ORDER BY Book_ID LIMIT 5;
+// SqlQuery;
+// $result = mysqli_query($link, $commandText);
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +32,9 @@ $result = mysqli_query ( $link, $commandText );
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="icon" href="./icon/favicon.ico.ico" type="image/x-icon" />
     <!-- <link rel="shortcut icon" href="./favicon.ico.ico" type="image/x-icon" /> -->
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
     <title>COMICS</title>
     <style>
@@ -75,7 +78,8 @@ $result = mysqli_query ( $link, $commandText );
             display: flex;
             align-items: center;
             width: 100%;
-            padding: 5px 20px;;
+            padding: 5px 20px;
+            ;
         }
 
 
@@ -103,6 +107,27 @@ $result = mysqli_query ( $link, $commandText );
             user-select: none;
         }
 
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
 
         /* RESPONSIVE CSS
 -------------------------------------------------- */
@@ -110,6 +135,7 @@ $result = mysqli_query ( $link, $commandText );
             .bd-placeholder-img-lg {
                 font-size: 3.5rem;
             }
+
             /* .divider{
             display: none;
         } */
@@ -118,7 +144,7 @@ $result = mysqli_query ( $link, $commandText );
         .featurette-heading {
             letter-spacing: -.05rem;
         }
-        
+
 
 
 
@@ -134,7 +160,7 @@ $result = mysqli_query ( $link, $commandText );
             .featurette-heading {
                 font-size: 50px;
             }
-           
+
         }
 
         @media (min-width: 62em) {
@@ -177,7 +203,7 @@ $result = mysqli_query ( $link, $commandText );
 
                     <ul class="navbar-nav ">
                         <li class="nav-item dropdown ms-2">
-                            <a class="nav-link  bi bi-cart text-light  fs-4" href="#" >
+                            <a class="nav-link  bi bi-cart text-light  fs-4" href="#">
                             </a>
                             <!-- <a class="nav-link dropdown-toggle bi bi-cart text-light " href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
@@ -327,26 +353,26 @@ $result = mysqli_query ( $link, $commandText );
     </div>
 
     <!-- Card_small -->
-    <div class="container ">
-        <div class="row ">
+    <div class="container swiper mySwiper">
+        <div class="row flex-nowrap swiper-wrapper">
 
-        <?php while($row = mysqli_fetch_assoc($result)) : ?>
-            <div class="col-sm-0 col-md-2 col-lg-2 mt-4">
+            <?php while ($row = mysqli_fetch_assoc($result)) : ?>
+                <div class="col-sm-0 col-md-2 col-lg-2 mt-4 swiper-slide">
 
-                <div class="card">
-                    <img src="./image/<?= $row["Img_ID"] ?>" class="rounded-4 img-fluid" alt="...">
-                    <div class="card-body">
-                        <p class="card-title text-start fw-bold text-nowrap"><?= $row["Book_Title"] ?></p>
-                        <p class="card-text text-start fs-6"><small class="text-muted"><?= $row["Book_Author"] ?></small>
+                    <div class="card">
+                        <img src="./image/<?= $row["Img_ID"] ?>" class="rounded-4 img-fluid" alt="...">
+                        <div class="card-body">
+                            <p class="card-title text-start fw-bold text-nowrap"><?= $row["Book_Title"] ?></p>
+                            <p class="card-text text-start fs-6"><small class="text-muted"><?= $row["Book_Author"] ?></small>
 
-                        </p>
+                            </p>
+                        </div>
+                        <span class="d-flex justify-content-between">
+                            <a href="" class="bi bi-heart text-dark fs-4"></a>
+                            <a href="" class=" bi bi-cart text-dark  fs-4"></a>
+                        </span>
                     </div>
-                    <span class="d-flex justify-content-between">
-                        <a href="" class="bi bi-heart text-dark fs-4"></a>
-                        <a href="" class=" bi bi-cart text-dark  fs-4"></a>
-                    </span>
                 </div>
-            </div>
 
             <?php endwhile ?>
 
@@ -585,7 +611,7 @@ $result = mysqli_query ( $link, $commandText );
                             <a href="" class=" bi bi-cart text-dark fs-4 ms-2 "></a>
                         </span>
 
-                        <button class=""style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px; border-width: 0px;">試讀</button>
+                        <button class="" style="background-color: #D45542 ; border-radius: 50px; color: #FCFBFA; height: 37px; width: 90px; border-width: 0px;">試讀</button>
                     </span>
                 </div>
             </div>
@@ -817,9 +843,9 @@ $result = mysqli_query ( $link, $commandText );
             </div>
             <div class="col-md-6 order-md-1">
 
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto my-100" 
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto my-100"
 
-                     xmlns="http://www.w3.org/2000/svg" role="img" a ria-label="Placeholder: 500x500"
+                    xmlns="http://www.w3.org/2000/svg" role="img" a ria-label="Placeholder: 500x500"
 
                     preserveAspectRatio="xMidYMid slice" focusable="false">
 
@@ -906,6 +932,38 @@ $result = mysqli_query ( $link, $commandText );
         </footer>
     </div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 4,
+                    spaceBetween: 40,
+                },
+                1024: {
+                    slidesPerView: 5,
+                    spaceBetween: 50,
+                },
+            },
+        });
+    </script>
+
+
+
+
 
 
 
@@ -919,8 +977,8 @@ $result = mysqli_query ( $link, $commandText );
         crossorigin="anonymous"></script>
     <!-- bootstrap -->
     <?php
-mysqli_close ( $link );
-?>
+    mysqli_close($link);
+    ?>
 
 </body>
 
